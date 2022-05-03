@@ -38,7 +38,7 @@ namespace JobTest
             Assert.IsTrue(Job3.JobType.Value == "Quality control");
 
             //tests that the constructor correctly assigns JobCoreCompetency to "Persistence"
-            Assert.IsTrue(Job3.JobCoreCompetency.Equals("Persistence"));
+            Assert.IsTrue(Job3.JobCoreCompetency.Value == "Persistence");
         }
 
         [TestMethod]
@@ -50,6 +50,7 @@ namespace JobTest
             //tests id values are not the same
             Assert.IsFalse(Job4.Equals(Job5));
         }
+
 
     } 
 }

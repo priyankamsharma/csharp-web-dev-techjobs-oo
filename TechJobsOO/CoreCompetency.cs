@@ -6,7 +6,7 @@ public class CoreCompetency
 {
     private int Id;
     private static int nextId = 1;
-    private string Value;
+    public string Value;
 
     // TODO: Change the fields to auto-implemented properties.
 
