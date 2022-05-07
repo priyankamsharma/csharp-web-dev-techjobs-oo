@@ -36,5 +36,5 @@ public class CoreCompetency
     {
         return Value;
     }
-}
+  }
 }

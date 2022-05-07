@@ -19,9 +19,8 @@ namespace TechJobsOO
             nextId++;
         }
 
-        public Job(int id, string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
         {
-            Id = id;
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
@@ -39,6 +38,33 @@ namespace TechJobsOO
         public override int GetHashCode()
         {
             return HashCode.Combine(Id);
+        }
+
+        public override string ToString()
+        {
+            string output = "";
+            if (Name.Equals(""))
+            {
+               Name = "Data not available";
+            }
+            if (EmployerName.Value.Equals("") || EmployerName.Value == null)
+            {
+               EmployerName.Value = "Data not available";
+            }
+            if (EmployerLocation.Value.Equals("") || EmployerLocation.Value == null)
+            {
+               EmployerLocation.Value = "Data not available";
+            }
+            if (JobType.Value.Equals("") || JobType.Value == null)
+            {
+               JobType.Value = "Data not available";
+            }
+            if (JobCoreCompetency.Value.Equals("") || JobCoreCompetency.Value == null)
+            {
+                JobCoreCompetency.Value = "Data not available";
+            }
+
+            return $"ID: {Id} \nName: {Name} \nEmployer: {EmployerName.Value} \nLocation: {EmployerLocation.Value} \nPosition Type: {JobType.Value} \nCore Competency: {JobCoreCompetency.Value}";
         }
     }
 }
