@@ -20,8 +20,7 @@ namespace TechJobsOO
 
             foreach (Job job in jobs)
             {
-                Console.WriteLine(job);
-                Console.WriteLine("\n");
+                Console.WriteLine("\n"+job+"\n");
             }
             
         }

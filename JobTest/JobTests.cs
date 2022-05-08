@@ -54,14 +54,14 @@ namespace JobTest
         //Test both requirements
         //When passed a Job object, it should return a string that contains a blank line before and after the job information.
         //The string should contain a label for each field, followed by the data stored in that field.Each field should be on its own line.
-        
+
         [TestMethod]
         public void TestToStringMethodForBlankLineAndContainsCorrectLabelsAndData()
         {
-            string testInputStr = testJob.ToString();
-            string testOutputStr = $"ID: {testJob.Id} \nName: {testJob.Name} \nEmployer: {testJob.EmployerName.Value} \nLocation: {testJob.EmployerLocation.Value} \nPosition Type: {testJob.JobType.Value} \nCore Competency: {testJob.JobCoreCompetency.Value}";
+            string testInput1 = testJob.ToString();
+            string testOutput1 = $"ID: {testJob.Id} \nName: {testJob.Name} \nEmployer: {testJob.EmployerName.Value} \nLocation: {testJob.EmployerLocation.Value} \nPosition Type: {testJob.JobType.Value} \nCore Competency: {testJob.JobCoreCompetency.Value}";
 
-            Assert.AreEqual(testOutputStr, testInputStr);
+            Assert.AreEqual(testOutput1, testInput1);
         }
 
         //test if a field is empty, the method should add, “Data not available” after the label.
