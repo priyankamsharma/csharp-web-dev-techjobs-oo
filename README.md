@@ -1,5 +1,4 @@
 # csharp-web-dev-techjobs-oo
-# csharp-web-dev-techjobs-oo
 Assignment #2: Tech Jobs (Object-Oriented Edition)
 Learning Objectives
 
