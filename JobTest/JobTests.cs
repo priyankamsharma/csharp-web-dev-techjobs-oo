@@ -59,7 +59,7 @@ namespace JobTest
         public void TestToStringMethodForBlankLineAndContainsCorrectLabelsAndData()
         {
             string testInput1 = testJob.ToString();
-            string testOutput1 = $"ID: {testJob.Id} \nName: {testJob.Name} \nEmployer: {testJob.EmployerName.Value} \nLocation: {testJob.EmployerLocation.Value} \nPosition Type: {testJob.JobType.Value} \nCore Competency: {testJob.JobCoreCompetency.Value}";
+            string testOutput1 = $"\nID: {testJob.Id} \nName: {testJob.Name} \nEmployer: {testJob.EmployerName.Value} \nLocation: {testJob.EmployerLocation.Value} \nPosition Type: {testJob.JobType.Value} \nCore Competency: {testJob.JobCoreCompetency.Value}\n";
 
             Assert.AreEqual(testOutput1, testInput1);
         }
@@ -71,7 +71,7 @@ namespace JobTest
         {
             Job testJob4 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
             string testInput2 = testJob4.ToString();
-            string testOutput2 = $"ID: {testJob4.Id} \nName: Data not available \nEmployer: Data not available \nLocation: Data not available \nPosition Type: Data not available \nCore Competency: Data not available";
+            string testOutput2 = $"\nID: {testJob4.Id} \nName: Data not available \nEmployer: Data not available \nLocation: Data not available \nPosition Type: Data not available \nCore Competency: Data not available\n";
 
             Assert.AreEqual(testOutput2, testInput2);
         }
